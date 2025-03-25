@@ -14,7 +14,7 @@ export class LandingPageComponent {
     constructor (private router: Router) {}
 
     onContinue () {
-        this.router.navigateByUrl('driver');
+        this.router.navigateByUrl('project');
 
     }
 }

@@ -1,6 +1,6 @@
-import { SnapType } from "./driver-type.type";
+import { SnapType } from "./project-type.type";
 
-export class Driver {
+export class Project {
 
     location? : string;
     id : string;
@@ -34,7 +34,7 @@ export class Driver {
         this.location = location;
     }
 
-    withLocation (location: string): Driver {
+    withLocation (location: string): Project {
         this.setLocation(location);
         return this;
     }

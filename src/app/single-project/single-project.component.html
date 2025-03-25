@@ -1,0 +1,15 @@
+<div class="face-snap-card" [ngClass]="{ snapped: !snapOrNotSnap}">
+    <h2>Le meilleur, c'est {{project.title | titlecase}}</h2>
+    <a routerLink="/project">Retour</a>
+    <h4>{{project.description}}</h4>
+    @if (project.location) {
+        <p>Localisation : {{project.location}}</p>
+    } @else {
+        <p>Localisation inconnue</p>
+    }
+    <img [src]="project.imageURL" [alt]="project.title"/><br/>
+    <p>Posté le {{project.createdAt | date: 'd MMM YYYY, à HH:mm'}}</p>
+    <button (click)="onChangeSnap()">{{snapButtonText}}</button>
+    <span [ngStyle]=" {color : 'rgb(0, ' + project.snaps*7 + ', 0)'}"><p>Snaps : {{project.snaps}}</p></span>
+    <p>{{snapOrNotSnap}}</p>
+</div>

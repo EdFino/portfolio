@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Driver } from '../models/driver';
+import { Project } from '../models/project';
 import { DatePipe, LowerCasePipe, NgClass, NgStyle, TitleCasePipe, UpperCasePipe } from '@angular/common';
-import { DriversService } from '../services/drivers-service';
+import { ProjectsService } from '../services/project-service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-single-driver',
+  selector: 'app-single-project',
   imports: [
     NgStyle,
     NgClass,
@@ -15,17 +15,17 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
     RouterLink,
 
   ],
-  templateUrl: './single-driver.component.html',
-  styleUrl: './single-driver.component.scss'
+  templateUrl: './single-project.component.html',
+  styleUrl: './single-project.component.scss'
 })
-export class SingleDriverComponent implements OnInit {
+export class SingleProjectComponent implements OnInit {
 
-    driver! : Driver;
+    project! : Project;
 
     snapButtonText!: string;
     snapOrNotSnap!: boolean;
 
-    constructor (private driverService: DriversService,
+    constructor (private projectService: ProjectsService,
                 private route: ActivatedRoute
     ) {}
 
@@ -33,8 +33,8 @@ export class SingleDriverComponent implements OnInit {
         this.snapButtonText = "Oh snap";
         this.snapOrNotSnap = true;
 
-        const driverID = this.route.snapshot.params['id'];
-        this.driver = this.driverService.getDriverById(driverID);
+        const projectID = this.route.snapshot.params['id'];
+        this.project = this.projectService.getProjectById(projectID);
     }
 
     onChangeSnap() :void {
@@ -47,13 +47,13 @@ export class SingleDriverComponent implements OnInit {
     }
 
     snap() :void {
-        this.driverService.driverById(this.driver.id, 'snap');
+        this.projectService.projectById(this.project.id, 'snap');
         this.snapOrNotSnap = false;
         this.snapButtonText = "Oh unsnap";
     }
 
     unSnap() :void {
-        this.driverService.driverById(this.driver.id, 'unsnap');
+        this.projectService.projectById(this.project.id, 'unsnap');
         this.snapOrNotSnap = true;
         this.snapButtonText = "Oh snap";
     }

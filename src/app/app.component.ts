@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DriverComponent } from './driver/driver.component';
-import { DriverListComponent } from './driver-list/driver-list.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectListComponent } from './project-list/project-list.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterOutlet } from '@angular/router';
 

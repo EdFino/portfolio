@@ -1,14 +1,14 @@
 import { Injectable } from "@angular/core";
-import { Driver } from "../models/driver";
-import { SnapType } from "../models/driver-type.type";
+import { Project } from "../models/project";
+import { SnapType } from "../models/project-type.type";
 
 @Injectable ({
     providedIn: 'root'
 })
 
-export class DriversService {
-    private drivers: Driver[] = [
-                new Driver (
+export class ProjectsService {
+    private projects : Project[] = [
+                new Project (
                 'Premier site',
                 'La première de mes créations',
                 'https://wallpaperaccess.com/full/1393718.jpg',
@@ -16,14 +16,14 @@ export class DriversService {
                 14
             ),
     
-            new Driver (
+            new Project (
                 'Second site',
                 'Entraînement très simple sur html/css',
                 'https://wallpaperaccess.com/full/1393740.jpg',
                 new Date(),
                 2
             ).withLocation('Github'),
-            new Driver (
+            new Project (
                 'Harmonistere',
                 'Mon chef d\'oeuvre',
                 'https://cdn.mos.cms.futurecdn.net/YdFsXZgsagfMECEWk7qRTQ.jpg',
@@ -32,20 +32,20 @@ export class DriversService {
             )
         ];
 
-        getDrivers(): Driver[] {
-            return [...this.drivers];
+        getProjects(): Project[] {
+            return [...this.projects];
         }
 
-        getDriverById(driverId: string): Driver {
-            const foundDriver : Driver | undefined = this.drivers.find(driver => driver.id === driverId);
-            if (!foundDriver) {
-                throw new Error ('Driver not found');
+        getProjectById(projectId: string): Project {
+            const foundProject : Project | undefined = this.projects.find(project => project.id === projectId);
+            if (!foundProject) {
+                throw new Error ('Projct not found');
             }
-                return foundDriver;
+                return foundProject;
         }
 
-        driverById(driverId: string, snapType : SnapType): void {
-            const driver : Driver | undefined = this.getDriverById(driverId);
-            driver.snap(snapType);
+        projectById(projectId: string, snapType : SnapType): void {
+            const project : Project | undefined = this.getProjectById(projectId);
+            project.snap(snapType);
         }
 }
