@@ -1,0 +1,15 @@
+<div class="face-snap-card" [ngClass]="{ snapped: !snapOrNotSnap}">
+    <h2>Le meilleur, c'est {{driver.title | titlecase}}</h2>
+    <a routerLink="/driver">Retour</a>
+    <h4>{{driver.description}}</h4>
+    @if (driver.location) {
+        <p>Localisation : {{driver.location}}</p>
+    } @else {
+        <p>Localisation inconnue</p>
+    }
+    <img [src]="driver.imageURL" [alt]="driver.title"/><br/>
+    <p>Posté le {{driver.createdAt | date: 'd MMM YYYY, à HH:mm'}}</p>
+    <button (click)="onChangeSnap()">{{snapButtonText}}</button>
+    <span [ngStyle]=" {color : 'rgb(0, ' + driver.snaps*7 + ', 0)'}"><p>Snaps : {{driver.snaps}}</p></span>
+    <p>{{snapOrNotSnap}}</p>
+</div>
