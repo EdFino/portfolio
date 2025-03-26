@@ -1,20 +1,23 @@
-header {
-    text-align: center;
-    background-color: #EEE;
-    margin-bottom: 20px;
-    padding: 10px;
-  }
+@font-face {
+    font-family: 'Rushford';
+    src: url('/assets/fonts/Rushfordclean-rgz89.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-  a {
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  
-  .active {
-    color: #666;
-    text-decoration: underline;
-  }
+header {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(38deg, #dcd9c1 53%, #f36531 47%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ecoute {
+    color: blue;
+    font-family: 'Rushford', sans-serif;
+}
