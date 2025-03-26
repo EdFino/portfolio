@@ -13,11 +13,88 @@ header {
     background: linear-gradient(38deg, #dcd9c1 53%, #f36531 47%);
     display: flex;
     flex-direction: column;
+    justify-content: start;
     align-items: center;
-    justify-content: center;
 }
 
-#ecoute {
-    color: blue;
+#first-level-header {
+    display: flex;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h1 {
+    color: #241f1f;
     font-family: 'Rushford', sans-serif;
+    font-size: 5em;
+    padding-right: 1em;
+    justify-self: end;
+    align-self: end;
+    position: relative;
+    left: 1em;
+    margin-bottom: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+}
+
+ul {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-left: 2em;
+    height: 70%;
+}
+
+ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #dcd9c1;
+    padding-right: 0.3em;
+    font-weight:500;
+    max-height: 10px;
+}
+
+.white-circle-nav {
+    font-size: 7em;
+    padding: 0;
+    margin: 0;
+}
+
+.li-content-nav {
+    position: relative;
+    top: 0.4em;
+}
+
+#last-line-nav {
+    grid-column: 1 / 3;
+    justify-self: center;
+}
+
+#second-level-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+
+h2 {
+    font-family: 'Rushford', 'Verdana';
+    color: #f6f6f6;
+    font-size: 3.5em;
+}
+
+#box-text-header {
+    background-color: #f6f6f6;
+    color: #f36531;
+    padding: 10px;
+    width: 30%;
 }
