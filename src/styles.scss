@@ -1,8 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
-
+@font-face {
+    font-family: 'Rushford';
+    src: url('/assets/fonts/Rushfordclean-rgz89.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
   body {
     padding: 0;
     margin: 0;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+  }
+
+  h1, h2 {
+    font-family: 'Rushford', sans-serif;
   }

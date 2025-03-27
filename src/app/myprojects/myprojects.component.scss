@@ -1,0 +1,77 @@
+#my-projects {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-33deg, #dcd9c1 53%, #f36531 47%);
+    display: grid;
+    grid-template-rows: 35% 20% 20% 20% 5%;
+    grid-template-columns: 30% 15% 10% 45%;
+}
+
+h2 {
+    font-size: 5em;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;
+    color: #f6f6f6;
+}
+
+.letter-apart {
+    position: relative;
+    bottom: 0.7em;
+}
+
+#projects-box {
+    background-color: #f6f6f6;
+    height: 100%;
+    grid-row: 2/5;
+    grid-column: 0/2;
+    align-self: center;
+    justify-self: end;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+/* #first-project, #second-project, #third-project {
+    background-color: orange;
+} */
+
+#first-project {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    display: flex;
+}
+
+#first-project-image {
+    width: 100%;
+    height: 95%;
+    background-image: url('/assets/images/harmonistereBandeau.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-self: center;
+    border-radius: 15px;
+}
+
+#second-project {
+    grid-row: 3/4;
+    grid-column: 4/5;
+}
+
+#second-project-image {
+    width: 100%;
+    height: 95%;
+    background-image: url('/assets/images/quaiBandeau.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-self: center;
+    border-radius: 15px;
+}
+
+#third-project {
+    grid-row: 4/5;
+    grid-column: 4/5;
+}
