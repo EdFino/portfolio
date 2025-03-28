@@ -5,12 +5,12 @@
     padding: 0;
     background: linear-gradient(-33deg, #dcd9c1 53%, #f36531 47%);
     display: grid;
-    grid-template-rows: 35% 20% 20% 20% 5%;
+    grid-template-rows: 28% 22% 22% 22% 6%;
     grid-template-columns: 30% 15% 10% 45%;
 }
 
 h2 {
-    font-size: 5em;
+    font-size: 4.3em;
     grid-row: 1/2;
     grid-column: 1/2;
     align-self: center;
@@ -30,15 +30,19 @@ h2 {
     grid-column: 0/2;
     align-self: center;
     justify-self: end;
+    color: #f36531;
+    width: 80%;
+    height: 70%;
+    padding: 15px;
+    text-align: justify;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #dcd9c1 #f6f6f6;
 }
 
 h3 {
     font-size: 2em;
 }
-
-/* #first-project, #second-project, #third-project {
-    background-color: orange;
-} */
 
 #first-project {
     grid-row: 2/3;
@@ -46,14 +50,27 @@ h3 {
     display: flex;
 }
 
-#first-project-image {
+#first-project-image, #second-project-image, #third-project-image {
     width: 100%;
-    height: 95%;
-    background-image: url('/assets/images/harmonistereBandeau.png');
+    height: 94%;
     background-size: cover;
     background-repeat: no-repeat;
     align-self: center;
-    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
+    border-top: #f6f6f6 3.5px solid;
+    border-bottom: #f6f6f6 3.5px solid;
+    border-left: #f6f6f6 3.5px solid;
+    box-sizing: border-box;
+}
+
+#first-project-image:hover, #second-project-image:hover, #third-project-image:hover {
+    border-top: #f36531 3.5px solid;
+    border-bottom: #f36531 3.5px solid;
+    border-left: #f36531 3.5px solid;}
+
+#first-project-image {
+    background-image: url('/assets/images/harmonistereBandeau.png');
+
 }
 
 #second-project {
@@ -62,16 +79,16 @@ h3 {
 }
 
 #second-project-image {
-    width: 100%;
-    height: 95%;
     background-image: url('/assets/images/quaiBandeau.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    align-self: center;
-    border-radius: 15px;
+
 }
 
 #third-project {
     grid-row: 4/5;
     grid-column: 4/5;
 }
+
+#third-project-image {
+    background-image: url('/assets/images/otherProjectsBandeau.png');
+}
+
