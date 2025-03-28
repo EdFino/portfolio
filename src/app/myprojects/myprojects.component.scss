@@ -69,7 +69,7 @@ h3 {
     border-left: #f36531 3.5px solid;}
 
 #first-project-image {
-    background-image: url('/assets/images/harmonistereBandeau.png');
+    background-image: url('/assets/images/bandeaux/harmonistereBandeau.png');
 
 }
 
@@ -79,7 +79,7 @@ h3 {
 }
 
 #second-project-image {
-    background-image: url('/assets/images/quaiBandeau.png');
+    background-image: url('/assets/images/bandeaux/quaiBandeau.png');
 
 }
 
@@ -89,6 +89,10 @@ h3 {
 }
 
 #third-project-image {
-    background-image: url('/assets/images/otherProjectsBandeau.png');
+    background-image: url('/assets/images/bandeaux/otherProjectsBandeau.png');
 }
 
+#projects-box > img {
+    width : 80px;
+    height: auto;
+}

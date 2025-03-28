@@ -10,23 +10,25 @@
     </h2>
 
     <div id="projects-box">
-        <p>Voici un rapide tour d'horizon des projets les plus importants pour moi.
-        Etant encore junior, cette section est encore modeste mais je m'applique à améliorer les projets existants ou à travailler sur de nouveaux que je vous présenterais bientôt !
-        Je suis très content du code que je déploie en ce moment, qui monte en qualité. Il est mieux factorisé, mieux commenté et plus performant.
-        Je m'emploie aussi à une veille technologique hebdomadaire pour rester au courant des dernières technologies que je tente ensuite d'intégrer dans mes applications.
-        </p>
+        <h3>{{currentTitle}}</h3>
+        <div class="technologies">
+            <img *ngFor="let tech of currentTechnologies" [src]="getTechnologiesImage(tech)" [alt]="tech" />
+        </div>
+        <p>{{currentSummary}}</p>
     </div>
 
     <div id="first-project">
-        <div id="first-project-image"></div>
+        <div id="first-project-image" (click)="updateDescription(1)"></div>
     </div>
     <div id="second-project">
-        <div id="second-project-image"></div>
+        <div id="second-project-image" (click)="updateDescription(2)"></div>
     </div>
 
     <div id="third-project">
-        <div id="third-project-image"></div>
+        <div id="third-project-image" (click)="updateDescription(3)"></div>
     </div>
+
+
 
 </div>
 
