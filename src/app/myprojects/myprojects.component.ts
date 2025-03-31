@@ -15,7 +15,7 @@ export class MyprojectsComponent {
     projectDescriptions: { idDescription: number; titleDescription: string; technologiesDescription: string[]; summaryDescription: string; }[] = [
         { idDescription: 1,
             titleDescription: 'Harmonistère',
-            technologiesDescription: ['react-logo', 'node-js-logo', 'mongodb-logo'],
+            technologiesDescription: ['react-logo', 'nodejs-logo', 'mongodb-logo'],
             summaryDescription: 'Harmonistère est une application pour le jeu de rôle éponyme qui sortira bientôt.'
         },
         { idDescription: 2,

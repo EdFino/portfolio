@@ -14,20 +14,19 @@
     </h2>
 
     <div id="stack-box-front">
-        <div id="stack-box-principal">
-            <h3>Frontend - Principal</h3>
-            <div class="principalStack">
+        <div class="title-box border-grey">
+            Front
+        </div>
+        <div class="inside-box">
+            <div class="stack-box stack-box-principal" id="stack-box-principal">
                 <div class="oneStack" *ngFor="let stack of getFilteredStacks('principal', 'front')">
                     <img [src]="stack.image" [alt]="stack.title" />
                     <h4>{{ stack.title }}</h4>
                 </div>
             </div>
-        </div>
 
-        <div id="stack-box-front-secondary">
-            <h3>Frontend - Secondaire</h3>
-            <div class="secondaryStack">
-                <div class="oneStack" *ngFor="let stack of getFilteredStacks('secondary', 'front')">
+            <div class="stack-box stack-box-secondary">
+                <div class="oneStack oneStack-secondary" *ngFor="let stack of getFilteredStacks('secondary', 'front')">
                     <img [src]="stack.image" [alt]="stack.title" />
                     <h4>{{ stack.title }}</h4>
                 </div>
@@ -36,20 +35,19 @@
     </div>
 
     <div id="stack-box-back">
-        <div id="stack-box-back-principal">
-            <h3>Backend - Principal</h3>
-            <div class="principalStack">
+        <div class="title-box border-grey">
+            Back
+        </div>
+        <div class="inside-box">
+            <div class="stack-box stack-box-principal" id="stack-box-back-principal">
                 <div class="oneStack" *ngFor="let stack of getFilteredStacks('principal', 'back')">
                     <img [src]="stack.image" [alt]="stack.title" />
                     <h4>{{ stack.title }}</h4>
                 </div>
             </div>
-        </div>
 
-        <div id="stack-box-back-secondary">
-            <h3>Backend - Secondaire</h3>
-            <div class="secondaryStack">
-                <div class="oneStack" *ngFor="let stack of getFilteredStacks('secondary', 'back')">
+            <div class="stack-box stack-box-secondary">
+                <div class="oneStack oneStack-secondary" *ngFor="let stack of getFilteredStacks('secondary', 'back')">
                     <img [src]="stack.image" [alt]="stack.title" />
                     <h4>{{ stack.title }}</h4>
                 </div>
@@ -58,20 +56,12 @@
     </div>
 
     <div id="stack-box-db">
-        <div id="stack-box-db-principal">
-            <h3>Database - Principal</h3>
-            <div class="principalStack">
-                <div class="oneStack" *ngFor="let stack of getFilteredStacks('principal', 'database')">
-                    <img [src]="stack.image" [alt]="stack.title" />
-                    <h4>{{ stack.title }}</h4>
-                </div>
-            </div>
+        <div class="title-box border-orange">
+            DB
         </div>
-
-        <div id="stack-box-db-secondary">
-            <h3>Backend - Secondaire</h3>
-            <div class="secondaryStack">
-                <div class="oneStack" *ngFor="let stack of getFilteredStacks('secondary', 'database')">
+        <div class="inside-box">
+            <div class="stack-box stack-box-principal" id="stack-box-db-principal">
+                <div class="oneStack" *ngFor="let stack of getFilteredStacks('principal', 'database')">
                     <img [src]="stack.image" [alt]="stack.title" />
                     <h4>{{ stack.title }}</h4>
                 </div>
