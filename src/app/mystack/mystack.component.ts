@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
 })
 export class MystackComponent {
     stacks = [
-            { image: '/assets/images/logos/react-logo.png', title: 'React', type: 'principal', category: 'front' },
             { image: '/assets/images/logos/javascript-logo.png', title: 'JavaScript', type: 'principal', category: 'front' },
+            { image: '/assets/images/logos/react-logo.png', title: 'React', type: 'principal', category: 'front' },
             { image: '/assets/images/logos/angular-logo.png', title: 'Angular', type: 'secondary', category: 'front' },
             { image: '/assets/images/logos/typescript-logo.png', title: 'TypeScript', type: 'secondary', category: 'front' },
             { image: '/assets/images/logos/tailwind-logo.png', title: 'Tailwind CSS', type: 'secondary', category: 'front' },
