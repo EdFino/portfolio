@@ -1,44 +1,59 @@
 <div id="contact-form">
-    <h2>Contactez-moi !</h2>
-    <h3>Vous avez des questions, des envies, des projets ?</h3>
-
+    <div id="contact-form-title">
+        <h2>Contactez-moi !</h2>
+        <h3>Vous avez des questions, des envies, des projets ?</h3>
+    </div>
     <div id="contact-dashboards">
 
         <div id="contact-details">
-            <h3>Mes coordonnées</h3>
-            <div class="line-contact">
+            <h4>Mes coordonnées</h4>
+            <a class="line-contact" href="tel:+33643064969">
                 <img src="assets/images/logos/phone-logo.png" alt="Logo pour le téléphone" />
-                <a href="tel:+33643064969">06 43 06 49 69</a>
-            </div>
-            <div class="line-contact">
-            <img src="assets/images/logos/mail-logo.png" alt="Logo pour le mail" />
-            <a href="mailto:seibeledouard@yahoo.fr">seibeledouard&#64;yahoo.fr</a>
-            </div>
+                06 43 06 49 69</a>
 
-            <div id="icon-contact">
+            <a class="line-contact" href="mailto:seibeledouard@yahoo.fr">
+            <img src="assets/images/logos/mail-logo.png" alt="Logo pour le mail" />
+            seibeledouard&#64;yahoo.fr</a>
+
+            <a class="line-contact" href="https://www.linkedin.com/in/edouard-seibel" target="_blank">
                 <img src="assets/images/logos/linkedin-logo.png" alt="Logo de Linkedin" />
+                Linkedin vers ma page</a>
+
+                <a class="line-contact" href="https://github.com/EdFino" target="_blank">
                 <img src="assets/images/logos/github-logo.png" alt="Logo de Github" />
-            </div>
+                Mon Github</a>
 
         </div>
 
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-            <label for="name">Nom :</label>
-            <input id="name" formControlName="name" required>
-            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-              Le nom est requis.
-            </div>
-          
-            <label for="email">Email :</label>
-            <input id="email" type="email" formControlName="email" required>
-            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-              Email invalide.
-            </div>
-          
-            <label for="message">Message :</label>
-            <textarea id="message" formControlName="message" required></textarea>
-            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
-              Le message est requis.
+            <legend>Formulaire pour une prise de contact immédiate</legend>
+            <div id="form-body">
+                <div id="form-first-part">
+                    <div class="input-form">
+                        <label for="name">Votre nom</label>
+                        <input id="name" formControlName="name" required>
+                        <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                            <span class="error-form">Le nom est requis.</span>
+                        </div>
+                    </div>
+                    <div class="input-form">
+                        <label for="email">Votre email</label>
+                        <input id="email" type="email" formControlName="email" required>
+                        <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                            <span class="error-form">Email invalide.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form-second-part">
+                    <div class="input-form">
+                        <label for="message">Votre message</label>
+                        <textarea placeholder="Quel est votre projet ?" id="message" formControlName="message" required></textarea>
+                        <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                            <span class="error-form">Le message est requis</span>.
+                        </div>
+                    </div>
+                </div>
             </div>
           
             <button type="submit" [disabled]="contactForm.invalid">Envoyer</button>

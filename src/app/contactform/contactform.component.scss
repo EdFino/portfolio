@@ -9,28 +9,50 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#contact-form-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5em;
+
+}
+
 #contact-form h2 {
     color: #f6f6f6;
     font-size: 5em;
+    margin: 0;
 }
 
 h3 {
     color:#f6f6f6;
+    margin: 0;
 }
 
 #contact-dashboards {
     display: flex;
     align-items: center;
     justify-content: space-around;
+
 }
 
 #contact-details {
     background-color: #dcd9c1;
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+
+}
+
+h4 {
+    color: #f6f6f6;
+    font-size: 1.4em;
+    margin: 0;
 }
 
 #contact-details img {
     width: 30px;
     height: 30px;
+    margin: 5px;
 }
 
 .line-contact {
@@ -44,34 +66,100 @@ h3 {
     justify-content: space-around;
 }
 
+#contact-details a:link,
+#contact-details a:visited {
+    color: #f36531; /* Couleur des liens non visités et visités */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+#contact-details a:link {
+    color: #f36531;
+}
+
+#contact-details a:visited {
+    color: #d35400;
+}
+
+#contact-details a:hover {
+    color: #f6f6f6;
+    text-decoration: none;
+}
+
+#contact-details a:active {
+    color: #b33a00;
+}
+
+a:hover img {
+    filter: brightness(0) invert(1); /* Assombrit légèrement l'image */
+    transform: scale(1.1); /* Agrandit légèrement l'image */
+    transition: all 0s ease; /* Ajoute une transition fluide */
+}
+
 form {
-    background-color: #dcd9c1;
+    background-color: #f6f6f6;
+    height: 100%;
+    width: 50%;
+    padding: 10px;
 }
 
 .form-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
+legend {
+    color: #f36531;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.4em;
+}
+
+#form-body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.input-form {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+}
+
+form label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #333;
+    color: #f36531;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #dcd9c1;
+form input,
+form textarea {
+    padding: 2px;
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: 1em;
+    font-size: 1.2em;
+    background-color: #dcd9c1;
 }
 
-.form-group textarea {
+form input {
+    min-width: 250px;
+}
+
+form textarea {
+    min-width: 300px;
     resize: vertical;
-    height: 100px;
+    height: 150px;
+}
+
+.error-form {
+    color: #f36531;
+    font-size: 0.9em;
+    margin-top: 5px;
+    font-style: italic;
 }
 
 button {
