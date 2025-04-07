@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { SmoothScrollDirective } from '../smooth-scroll.directive';
 
 @Component({
   selector: 'app-header',
   imports: [
-    RouterLink,
-    RouterLinkActive
+    SmoothScrollDirective,
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+    constructor() {
+        console.log('HeaderComponent chargé');
+      }
+      
 
 }
