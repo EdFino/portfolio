@@ -1,0 +1,35 @@
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    background-color: rgba(243, 101, 49, 0.9); /* Couleur de fond avec transparence */
+    z-index: 4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul li {
+    color: #dcd9c1;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px;
+}
+
+nav ul li:hover {
+    color: #f6f6f6;
+}
