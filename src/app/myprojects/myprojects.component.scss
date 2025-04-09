@@ -38,10 +38,25 @@ h2 {
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #dcd9c1 #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.technologies img {
+    width: 60px;
+    height: auto;
+    margin: 0 5px 1em 5px;
+}
+
+.summary-project {
+    white-space: pre-line;
 }
 
 h3 {
     font-size: 2em;
+    margin: 0.3em 0 0.6em 0;
 }
 
 #first-project {
