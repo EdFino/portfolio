@@ -30,7 +30,7 @@ header {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: linear-gradient(38deg, #dcd9c1 53%, #f36531 47%);
+    background: linear-gradient(38deg, var(--grey-color) 53%, var(--orange-color) 47%);
     display: grid;
     grid-template-rows: 45% 20% 30% 5%;
     grid-template-columns: 40% 15% 45%;
@@ -73,7 +73,7 @@ ul li {
     flex-direction: row;
     align-self: center;
     align-items: center;
-    color: #dcd9c1;
+    color: var(--grey-color);
     font-weight:500;
     max-height: 80px;
     width: 100%;
@@ -81,7 +81,7 @@ ul li {
 }
 
 ul li:hover {
-    color: #f6f6f6;
+    color: var(--white-color);
     cursor: pointer;
 }
 
@@ -97,7 +97,7 @@ ul li:hover {
 }
 
 a {
-    color:#dcd9c1;
+    color: var(--grey-color);
     text-decoration: none;
 }
 
@@ -107,7 +107,7 @@ a {
 }
 
 h2 {
-    color: #f6f6f6;
+    color: var(--white-color);
     justify-self: start;
     font-size: 4em;
     grid-column: 2/3;
@@ -130,8 +130,8 @@ h2 {
 }
 
 #box-text-header {
-    background-color: #f6f6f6;
-    color: #f36531;
+    background-color: var(--white-color);
+    color: var(--orange-color);
     text-align: justify;
     padding: 15px;
     grid-column: 2/4;

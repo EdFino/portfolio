@@ -4,6 +4,20 @@
     font-weight: normal;
     font-style: normal;
 }
+
+:root {
+    --orange-color: #f36531;
+    --grey-color: #dcd9c1;
+    --white-color: #f6f6f6;
+}
+
+.dark-theme {
+    --orange-color: #0c9ace;
+    --grey-color: #23263e;
+    --white-color: #090909;
+}
+
+
   body {
     padding: 0;
     margin: 0;
@@ -14,3 +28,5 @@
   h1, h2 {
     font-family: 'Rushford', sans-serif;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

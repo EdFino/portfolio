@@ -30,4 +30,11 @@
     <div id="box-text-header" text-align="center">
             <p>Développeur web FullStack à votre service ! Pour une embauche directe ou en freelance, je me ferais un plaisir de vous aider. Développement d'un site ou d'une application web ou mobile, en partant d'un design pré-établi ou en concevant la maquette moi-même, c'est vous qui décidez. Pour du front-end, du back-end ou des branchements, je peux aussi !</p>
     </div>
+
+    <mat-slide-toggle
+  [checked]="themeService.isDarkMode()"
+  (change)="toggleTheme()">
+  {{ themeService.isDarkMode() ? 'Mode sombre' : 'Mode clair' }}
+</mat-slide-toggle>
+
 </header>
