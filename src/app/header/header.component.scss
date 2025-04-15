@@ -25,6 +25,15 @@
     }
 }
 
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-150%); /* Commence hors de l'écran à droite */
+    }
+    to {
+        transform: translateX(0); /* Arrive à sa position normale */
+    }
+}
+
 header {
     width: 100%;
     height: 100vh;
@@ -140,4 +149,15 @@ h2 {
     align-self: end;
     justify-self: start;
     animation: slideInFromBottom 1.4s ease-in;
+}
+
+button {
+    width: 4em;
+    height: 4em;
+    border-radius: 35px;
+    background-color: var(--button-color);
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    animation: slideInFromTop 1.1s ease-out;
 }

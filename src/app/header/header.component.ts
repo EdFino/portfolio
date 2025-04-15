@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SmoothScrollDirective } from '../smooth-scroll.directive';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ThemeService } from '../services/theme-service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { ThemeService } from '../services/theme-service';
   imports: [
     SmoothScrollDirective,
     MatSlideToggleModule,
+    NgIf
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
