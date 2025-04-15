@@ -9,24 +9,27 @@
     --orange-color: #f36531;
     --grey-color: #dcd9c1;
     --white-color: #f6f6f6;
+    --title-color: #241f1f;
 }
 
 .dark-theme {
-    --orange-color: #0c9ace;
-    --grey-color: #23263e;
-    --white-color: #090909;
+    --orange-color: #102a43;
+    --grey-color: #718096;
+    --white-color: #dcd9c1;
+    --title-color: #dcd9c1;
 }
 
-
-  body {
+body {
     padding: 0;
     margin: 0;
     height: 100%;
     font-family: 'Roboto', sans-serif;
-  }
+}
 
-  h1, h2 {
+h1, h2 {
     font-family: 'Rushford', sans-serif;
-  }
+}
+
 html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

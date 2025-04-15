@@ -37,7 +37,7 @@ header {
 }
 
 h1 {
-    color: #241f1f;
+    color: var(--title-color);
     font-size: 5em;
     margin: 1em;
     grid-column: 1 / 3;

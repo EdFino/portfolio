@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ThemeService } from '../services/theme-service';
 
 @Component({
   selector: 'app-myprojects',
@@ -9,6 +10,8 @@ import { Component } from '@angular/core';
   styleUrl: './myprojects.component.scss'
 })
 export class MyprojectsComponent {
+
+    constructor(private themeService: ThemeService) {}
 
     myProjectsDefaultText: string = `Voici un rapide tour d'horizon des projets les plus importants pour moi. Etant encore junior, cette section est encore modeste mais je m'applique à améliorer les projets existants ou à travailler sur de nouveaux que je vous présenterais bientôt ! Je suis très content du code que je déploie en ce moment, qui monte en qualité. Il est mieux factorisé, mieux commenté et plus performant. Je m'emploie aussi à une veille technologique hebdomadaire pour rester au courant des dernières technologies que je tente ensuite d'intégrer dans mes applications.`
 
@@ -62,6 +65,7 @@ export class MyprojectsComponent {
     }
 
     getTechnologiesImage(technology: string): string {
-        return `/assets/images/logos/${technology}.png`;
+        const whatIsTheme = this.themeService.isDarkMode() ? 'dark-theme' : 'light-theme';
+        return `/assets/images/logos/${whatIsTheme}/${technology}.png`;
     };
 }

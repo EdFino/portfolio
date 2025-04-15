@@ -3,7 +3,7 @@ nav {
     top: 3%;
     right: 0;
     width: 30%;
-    background-color: rgba(243, 101, 49, 0.9); /* Couleur de fond avec transparence */
+    background-color: var(--orange-color); /* Couleur de fond avec transparence */
     z-index: 4;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
@@ -24,12 +24,12 @@ a {
 }
 
 nav ul li {
-    color: #dcd9c1;
+    color: var(--grey-color);
     font-weight: bold;
     cursor: pointer;
     padding: 8px;
 }
 
 nav ul li:hover {
-    color: #f6f6f6;
+    color: var(--white-color);
 }

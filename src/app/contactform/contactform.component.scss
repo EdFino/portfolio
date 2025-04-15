@@ -4,7 +4,7 @@
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #f36531;
+    background-color: var(--orange-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -17,13 +17,13 @@
 }
 
 #contact-form h2 {
-    color: #f6f6f6;
+    color: var(--white-color);
     font-size: 5em;
     margin: 0;
 }
 
 h3 {
-    color:#f6f6f6;
+    color: var(--white-color);
     margin: 0;
 }
 
@@ -35,7 +35,7 @@ h3 {
 }
 
 #contact-details {
-    background-color: #dcd9c1;
+    background-color: var(--grey-color);
     width: 30%;
     height: 100%;
     padding: 10px;
@@ -43,7 +43,7 @@ h3 {
 }
 
 h4 {
-    color: #f6f6f6;
+    color: var(--white-color);
     font-size: 1.4em;
     margin: 0;
 }
@@ -67,25 +67,25 @@ h4 {
 
 #contact-details a:link,
 #contact-details a:visited {
-    color: #f36531; /* Couleur des liens non visités et visités */
+    color: var(--orange-color); /* Couleur des liens non visités et visités */
     text-decoration: none; /* Supprime le soulignement */
 }
 
 #contact-details a:link {
-    color: #f36531;
+    color: var(--orange-color);
 }
 
 #contact-details a:visited {
-    color: #d35400;
+    color: var(--orange-color);
 }
 
 #contact-details a:hover {
-    color: #f6f6f6;
+    color: var(--white-color);
     text-decoration: none;
 }
 
 #contact-details a:active {
-    color: #b33a00;
+    color: var(--orange-color);
 }
 
 a:hover img {
@@ -95,7 +95,7 @@ a:hover img {
 }
 
 form {
-    background-color: #f6f6f6;
+    background-color: var(--white-color);
     height: 100%;
     width: 50%;
     padding: 10px;
@@ -106,7 +106,7 @@ form {
 }
 
 legend {
-    color: #f36531;
+    color: var(--orange-color);
     font-size: 1.8em;
     font-weight: bold;
     text-align: center;
@@ -132,7 +132,7 @@ form label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #f36531;
+    color: var(--orange-color);
 }
 
 form input,
@@ -141,7 +141,7 @@ form textarea {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 1.2em;
-    background-color: #dcd9c1;
+    background-color: var(--grey-color);
 }
 
 form input {
@@ -155,7 +155,7 @@ form textarea {
 }
 
 .error-form {
-    color: #f36531;
+    color: var(--orange-color);
     font-size: 0.9em;
     margin-top: 5px;
     font-style: italic;
@@ -164,8 +164,8 @@ form textarea {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #f36531;
-    color: #fff;
+    background-color: var(--orange-color);
+    color: var(--white-color);
     border: none;
     border-radius: 4px;
     font-size: 1em;
@@ -174,7 +174,7 @@ button {
 }
 
 button:hover {
-    background-color: #d35400;
+    background-color: var(--orange-color);
 }
 
 button:disabled {
