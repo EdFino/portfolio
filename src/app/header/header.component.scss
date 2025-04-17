@@ -161,3 +161,8 @@ button {
     right: 1em;
     animation: slideInFromTop 1.1s ease-out;
 }
+
+button:hover {
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
