@@ -9,7 +9,6 @@ import { StickyNavbarComponent } from "./sticky-navbar/sticky-navbar.component";
 import { MeInDetailComponent } from "./me-in-detail/me-in-detail.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
-
 @Component({
   selector: 'app-root',
   imports: [
@@ -22,6 +21,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     StickyNavbarComponent,
     MeInDetailComponent,
     TranslateModule
+    
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

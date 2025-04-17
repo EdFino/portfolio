@@ -1,10 +1,28 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
-import { registerLocaleData } from '@angular/common';
-import * as fr from '@angular/common/locales/fr';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
-registerLocaleData(fr.default);
+import { importProvidersFrom } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideHttpClient(),
+    importProvidersFrom(
+      TranslateModule.forRoot({
+        defaultLanguage: 'fr',
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+        }
+      })
+    )
+  ]
+});
