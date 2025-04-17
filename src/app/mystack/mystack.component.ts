@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../services/theme-service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-mystack',
@@ -9,16 +10,30 @@ import { ThemeService } from '../services/theme-service';
   templateUrl: './mystack.component.html',
   styleUrl: './mystack.component.scss'
 })
-export class MystackComponent implements OnInit {
+export class MystackComponent implements OnInit, OnDestroy {
 
   whatIsTheme: string = 'light-theme';
   stacks: any[] = [];
+  private themeSub!: Subscription;
 
   constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {
-    this.whatIsTheme = this.themeService.isDarkMode() ? 'dark-theme' : 'light-theme';
+    // Abonnement aux changements de thème
+    this.themeSub = this.themeService.isDarkMode$.subscribe(isDark => {
+      this.whatIsTheme = isDark ? 'dark-theme' : 'light-theme';
+      this.updateStacks(); // Met à jour les images
+    });
 
+    // Initialisation
+    this.updateStacks();
+  }
+
+  ngOnDestroy(): void {
+    if (this.themeSub) this.themeSub.unsubscribe();
+  }
+
+  updateStacks(): void {
     this.stacks = [
       { image: `/assets/images/logos/${this.whatIsTheme}/javascript-logo.png`, title: 'JavaScript', type: 'principal', category: 'front' },
       { image: `/assets/images/logos/${this.whatIsTheme}/react-logo.png`, title: 'React', type: 'principal', category: 'front' },
