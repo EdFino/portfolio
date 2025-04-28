@@ -1,12 +1,12 @@
 <header>
-    <h1>Développeur Web <br/> FullStack</h1>
+    <h1>{{ 'TITLE-ONE' | translate }} <br/> {{ 'TITLE-TWO' | translate }}</h1>
     <nav>
         <ul>
-            <a href="#my-projects" appSmoothScroll><li><span class="white-circle-nav">●</span><span class="li-content-nav">{{ 'DESCRIPTION' | translate }}</span></li></a>
-            <a href="#my-stack" appSmoothScroll><li><span class="white-circle-nav">●</span><span class="li-content-nav">COMPETENCES</span></li></a>
-            <a href="#me-in-detail" appSmoothScroll><li><span class="white-circle-nav">●</span><span class="li-content-nav">MOI PLUS <br/> EN DETAILS</span></li></a>
-            <a href="#contact-form" appSmoothScroll><li><span class="white-circle-nav">●</span><span class="li-content-nav">ON PREND <br/>CONTACT ?</span></li></a>
-            <a href="assets/documents/CV-Edouard-SEIBEL.pdf" download="CV-Edouard-SEIBEL.pdf"><li><span class="white-circle-nav">●</span><span class="li-content-nav">MON CV</span></li></a>
+            <a href="#my-projects" appSmoothScroll><li><span class="white-circle-nav">●</span><span class="li-content-nav">{{ 'NAVBAR-PROJECTS' | translate }}</span></li></a>
+            <a href="#my-stack" appSmoothScroll><li><span class="white-circle-nav">●</span><span class="li-content-nav">{{ 'NAVBAR-STACK' | translate }}</span></li></a>
+            <a href="#me-in-detail" appSmoothScroll><li><span class="white-circle-nav">●</span><span class="li-content-nav">{{ 'NAVBAR-ME-ONE' | translate }} <br/> {{ 'NAVBAR-ME-TWO' | translate }}</span></li></a>
+            <a href="#contact-form" appSmoothScroll><li><span class="white-circle-nav">●</span><span class="li-content-nav">{{ 'NAVBAR-FORM-ONE' | translate }} <br/>{{ 'NAVBAR-FORM-TWO' | translate }}</span></li></a>
+            <a href="assets/documents/CV-Edouard-SEIBEL.pdf" download="CV-Edouard-SEIBEL.pdf"><li><span class="white-circle-nav">●</span><span class="li-content-nav">{{ 'NAVBAR-CV-ONE' | translate }}<br/>{{ 'NAVBAR-CV-TWO' | translate }}</span></li></a>
         </ul>
     </nav>
     
@@ -28,7 +28,7 @@
     </h2>
 
     <div id="box-text-header" text-align="center">
-            <p>Développeur web FullStack à votre service ! Pour une embauche directe ou en freelance, je me ferais un plaisir de vous aider. Développement d'un site ou d'une application web ou mobile, en partant d'un design pré-établi ou en concevant la maquette moi-même, c'est vous qui décidez. Pour du front-end, du back-end ou des branchements, je peux aussi !</p>
+            <p>{{ 'HEADER-ME' | translate }}</p>
     </div>
 
     <div id="buttons-theme">
@@ -43,7 +43,7 @@
         </button>
 
         <button (click)="toggleLanguage()">
-            {{ currentLang === 'fr' ? '🇬🇧 English' : '🇫🇷 Français' }}
+            {{ currentLang === 'fr' ? '🇬🇧' : '🇫🇷' }}
         </button>
 
     </div>

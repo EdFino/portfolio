@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SmoothScrollDirective } from '../smooth-scroll.directive';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sticky-navbar',
@@ -8,6 +9,7 @@ import { SmoothScrollDirective } from '../smooth-scroll.directive';
   imports: [
     CommonModule,
     SmoothScrollDirective,
+    TranslateModule
   ],
   templateUrl: './sticky-navbar.component.html',
   styleUrls: ['./sticky-navbar.component.scss']

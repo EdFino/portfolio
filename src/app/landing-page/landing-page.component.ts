@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-landing-page',
   imports: [
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'

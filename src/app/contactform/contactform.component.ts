@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../services/theme-service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-contactform',
     standalone: true,
-    imports: [CommonModule, ReactiveFormsModule],
+    imports: [CommonModule, ReactiveFormsModule, TranslateModule],
     templateUrl: './contactform.component.html',
-      styleUrls: ['./contactform.component.scss']
+    styleUrls: ['./contactform.component.scss']
 })
 
 export class ContactFormComponent {
@@ -18,7 +19,8 @@ export class ContactFormComponent {
         message: FormControl<string>;
     }>;
 
-    constructor(private fb: FormBuilder, private themeService: ThemeService) {
+    constructor(private fb: FormBuilder, 
+                private themeService: ThemeService) {
         this.contactForm = new FormGroup({
             name: new FormControl('', { nonNullable: true, validators: [Validators.required] }),
             email: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.email] }),
@@ -28,8 +30,8 @@ export class ContactFormComponent {
 
     onSubmit() {
         if (this.contactForm.valid) {
-        const formData = this.contactForm.value;
-        window.location.href = `mailto:seibeledouard@yahoo.fr?subject=Contact depuis le Portfolio&body=Nom: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AMessage: ${formData.message}`;
+            const formData = this.contactForm.value;
+            window.location.href = `mailto:seibeledouard@yahoo.fr?subject=Contact depuis le Portfolio&body=Nom: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AMessage: ${formData.message}`;
         }
     }
 

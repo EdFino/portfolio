@@ -32,7 +32,8 @@ import { NgIf } from '@angular/common';
     }
 
     toggleLanguage(): void {
-        this.currentLang = this.currentLang === 'fr' ? 'en' : 'fr';
-        this.translate.use(this.currentLang);
+        const newLang = this.currentLang === 'fr' ? 'en' : 'fr';
+        this.translate.use(newLang);  // Utiliser directement la méthode `use` pour changer la langue
+        this.currentLang = newLang;  // Mettre à jour l'état local
     }
 }

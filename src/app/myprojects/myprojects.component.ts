@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ThemeService } from '../services/theme-service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-myprojects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './myprojects.component.html',
   styleUrl: './myprojects.component.scss'
 })
