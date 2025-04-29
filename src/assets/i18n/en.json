@@ -1,20 +1,16 @@
 {
-    "TITLE-ONE": "FULL STACK",
-    "TITLE-TWO": "DEVELOPER",
-    "TITLE-PROJECTS": "MY PROJECTS",
+    "TITLE": "FULL STACK \n DEVELOPER",
+    "TITLE-PROJECTS": "SOME PROJECTS",
     "TITLE-STACK": "MY SKILLS",
     "TITLE-ME": "ABOUT ME",
     "TITLE-FORM": "CONTACT ME",
     "NAVBAR-PROJECTS": "PROJECTS",
     "NAVBAR-STACK": "STACK",
-    "NAVBAR-ME-ONE": "ME IN",
-    "NAVBAR-ME-TWO": "DETAILS",
-    "NAVBAR-FORM-ONE": "LET'S GET",
-    "NAVBAR-FORM-TWO": "IN TOUCH",
-    "NAVBAR-CV-ONE": "TO DOWNLOAD",
-    "NAVBAR-CV-TWO": "MY CV",
-    "NAVBAR-FORM": "CONTACT ME",
-    "NAVBAR-ME": "ME IN DETAILS",
+    "NAVBAR-ME": "ME IN\nDETAILS",
+    "NAVBAR-FORM": "LET'S GET \n IN TOUCH",
+    "NAVBAR-CV": "TO DOWNLOAD MY CV",
+    "STICKY-NAVBAR-FORM": "CONTACT ME",
+    "STICKY-NAVBAR-ME": "ME IN DETAILS",
     "HEADER-ME": "FullStack web developer at your service! Whether for direct employment or freelance work, I would be delighted to assist you. Developing a website, a web or mobile application, starting from an existing design or creating the mockup myself — it's your choice. Front-end, back-end, or integrations — I can handle it all!",
     "SUBTITLE-FORM": "Do you have questions, ideas, or projects?",
     "FORM-CONTACT-DETAILS": "My contact details",
@@ -33,10 +29,26 @@
     "ME-ADJECTIVE-TWO": "Organized",
     "ME-ADJECTIVE-THREE": "Fast learner",
     "ME-IN-DETAILS": "Former projectionist and holder of a master's degree in management, I launched my own company, \"La Cinquième Dimension.\" There, I developed my skills in project management, risk anticipation, and discovered firsthand the full range of an organization's needs.\nFollowing the arrival of Covid, I decided to retrain in a field that had interested me for several years: web development. I then began a Graduate Fullstack program and have so far specialized in developing React and Node.js applications.\nAfter several months of internship with the CodAlly team, I am currently working on the website for the role-playing game \"Harmonistère,\" which is about to be released. Today, I am looking for a position as a web developer, and in the meantime, I continue building my own projects and fulfilling freelance orders.",
-    "PRO-TITLE-CARD": "Click on a project!",
-    "PRO-CARD": "Here’s a quick overview of the most important projects for me. As a junior developer, this section is still modest, but I am working hard to improve existing projects and develop new ones that I will present to you soon! I am very happy with the code I’m currently deploying — it’s becoming more refined, better commented, and more efficient. I also engage in weekly technology watch to stay updated with the latest technologies, which I then try to integrate into my applications.",
-    "PRO-CARD-ONE": "Harmonistère is an application for the eponymous role-playing game that will be released soon. Although the site is still under construction, it remains my greatest achievement as a developer. Built with React and Node.js, and soon to be deployed, users can already sign up, create character sheets, edit them freely, delete them, and create game sessions with an integrated chatbox.\n\nWith the help of a graphic designer and the client, new features will be released in the coming days, such as:\n\n- Several tools to play Harmonistère using your character sheet, thanks to resource and injury management.\n- Friend management and access to their character sheets.\n- Key features for playing together within the Harmonistère game instance.",
-    "PRO-CARD-TWO": "Le Quai Antique was my first project requested by my training platform Studi. It was completed in barely two months — an exhausting period that significantly helped me improve, even though the final result reflects a beginner’s first attempt.\n\nStill, it features a front-end built with HTML, CSS, and JavaScript, fully responsive, and includes extensive communication with a MySQL database, allowing users to book tables or access an admin panel to modify opening hours.",
-    "PRO-CARD-THREE": "Is that all? Not at all! You can of course also add this very portfolio you’re looking at, created with Angular. I'm far from using the full potential of the framework yet, but it’s a glimpse before I tackle a bigger project. I also built a website for an association in Créteil, but the project was canceled halfway through, so I prefer not to showcase it.\n\nI also can’t reveal what I produced with the CodAlly team during my nearly year-long internship, as we were working for a Quebec government ministry. However, I can say that I did a lot of front-end work, mainly in JavaScript, and occasionally touched on Python (using Flask) to create a few functions or connect back-end logic with my designs.\n\nAs for my future projects, I’m already working on them: I plan to complete my first real freelance mission for a Belgian company, start building a mobile version of Harmonistère with React Native once the site is advanced enough, and finally, develop a carpooling website using React and Symfony to sharpen my skills!",
-    "PRO-CARD-THREE-TITLE": "Other projects"
+    "PROJECTS": {
+        "DEFAULT_TITLE": "Click on a project!",
+        "DEFAULT_TEXT": "Here’s a quick overview of the most important projects for me. As a junior developer, this section is still modest, but I am working hard to improve existing projects and develop new ones that I will present to you soon! I am very happy with the code I’m currently deploying — it’s becoming more refined, better commented, and more efficient. I also engage in weekly technology watch to stay updated with the latest technologies, which I then try to integrate into my applications.",
+        "LIST": [
+            {
+            "TITLE": "Harmonistère",
+            "TECHNOLOGIES": ["react-logo", "nodejs-logo", "mongodb-logo"],
+            "SUMMARY": "Harmonistère is an application for the eponymous role-playing game that will be released soon. Although the site is still under construction, it remains my greatest achievement as a developer. Built with React and Node.js, and soon to be deployed, users can already sign up, create character sheets, edit them freely, delete them, and create game sessions with an integrated chatbox.\n\nWith the help of a graphic designer and the client, new features will be released in the coming days, such as:\n\n- Several tools to play Harmonistère using your character sheet, thanks to resource and injury management.\n- Friend management and access to their character sheets.\n- Key features for playing together within the Harmonistère game instance."
+            },
+            {
+            "TITLE": "Le Quai Antique",
+            "TECHNOLOGIES": ["html-logo", "php-logo", "mysql-logo"],
+            "SUMMARY": "Le Quai Antique was my first project requested by my training platform Studi. It was completed in barely two months — an exhausting period that significantly helped me improve, even though the final result reflects a beginner’s first attempt.\n\nStill, it features a front-end built with HTML, CSS, and JavaScript, fully responsive, and includes extensive communication with a MySQL database, allowing users to book tables or access an admin panel to modify opening hours."
+
+            },
+            {
+            "TITLE": "Other projects",
+            "TECHNOLOGIES": ["javascript-logo", "angular-logo", "python-logo"],
+            "SUMMARY": "Is that all? Not at all! You can of course also add this very portfolio you’re looking at, created with Angular. I'm far from using the full potential of the framework yet, but it’s a glimpse before I tackle a bigger project. I also built a website for an association in Créteil, but the project was canceled halfway through, so I prefer not to showcase it.\n\nI also can’t reveal what I produced with the CodAlly team during my nearly year-long internship, as we were working for a Quebec government ministry. However, I can say that I did a lot of front-end work, mainly in JavaScript, and occasionally touched on Python (using Flask) to create a few functions or connect back-end logic with my designs.\n\nAs for my future projects, I’m already working on them: I plan to complete my first real freelance mission for a Belgian company, start building a mobile version of Harmonistère with React Native once the site is advanced enough, and finally, develop a carpooling website using React and Symfony to sharpen my skills!"
+            }
+        ]
+    }
 }

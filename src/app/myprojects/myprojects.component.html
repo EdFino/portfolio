@@ -1,13 +1,5 @@
 <div id='my-projects'>
-    <h2>Des<br/>
-        <span class="letter-apart">P</span>
-        <span class="letter-apart">R</span>
-        <span class="letter-apart">O</span>
-        <span class="letter-apart">J</span>
-        <span class="letter-apart">E</span>
-        <span class="letter-apart">T</span>
-        <span class="letter-apart">S</span>
-    </h2>
+    <h2>{{ "TITLE-PROJECTS" | translate}}</h2>
 
     <div id="projects-box">
         <h3>{{currentTitle}}</h3>
@@ -18,13 +10,13 @@
     </div>
 
     <div id="first-project">
-        <div id="first-project-image" (click)="updateDescription(1)"></div>
+        <div id="first-project-image" (click)="updateDescription(0)"></div>
     </div>
     <div id="second-project">
-        <div id="second-project-image" (click)="updateDescription(2)"></div>
+        <div id="second-project-image" (click)="updateDescription(1)"></div>
     </div>
     <div id="third-project">
-        <div id="third-project-image" (click)="updateDescription(3)"></div>
+        <div id="third-project-image" (click)="updateDescription(2)"></div>
     </div>
 
 
